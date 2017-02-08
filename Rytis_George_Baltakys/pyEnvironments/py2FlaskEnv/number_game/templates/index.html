@@ -13,13 +13,13 @@
 	<form action="">
 		{% if win %}
 			<p><strong>{{ guess }}</strong> was the number!</p>
-			<input type="submit" name="button" value="Play again!" id="button"></button>
+			<button type="submit" name="button" value="Play again!" id="button"></button>
 			<script type="text/javascript">
 				document.getElementById("button").focus();
 			</script>
 		{% else %}
 			<input type="text" name="guess" id="input">
-			<input type="submit" name="button" value="Guess"></button>
+			<buton type="submit" name="button" value="Guess"></button>
 			<script type="text/javascript">
 				document.getElementById("input").focus();
 			</script>
