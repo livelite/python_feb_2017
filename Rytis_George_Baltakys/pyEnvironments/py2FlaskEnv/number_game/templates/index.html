@@ -4,9 +4,6 @@
 	<title>Number Game</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<script type="text/javascript">
-		document.getElementById("input").focus();
-	</script>
 </head>
 <body>
 	<h1>Welcome to the Great Number Game!</h1>
@@ -16,10 +13,16 @@
 	<form action="">
 		{% if win %}
 			<p><strong>{{ guess }}</strong> was the number!</p>
-			<input type="submit" name="button" value="Play again!"></button>
+			<input type="submit" name="button" value="Play again!" id="button"></button>
+			<script type="text/javascript">
+				document.getElementById("button").focus();
+			</script>
 		{% else %}
 			<input type="text" name="guess" id="input">
 			<input type="submit" name="button" value="Guess"></button>
+			<script type="text/javascript">
+				document.getElementById("input").focus();
+			</script>
 		{% endif %}
 	</form>
 </body>
