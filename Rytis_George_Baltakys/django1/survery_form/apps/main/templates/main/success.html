@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<style>
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			margin: 100px;
+		}
+		p {
+			margin: 20px;
+		}
+	</style>
+</head>
+	<p>Thanks for submitting this form! You have submitted this form {{ request.session.counter }} times now.</p>
+	<p>Name: {{ request.session.name }}</p>
+	<p>Dojo Location: {{ request.session.location }}</p>
+	<p>Favorite Language: {{ request.session.language }}</p>
+	<p>Comment: {{ request.session.comment }}</p>
+	<a href="/"><button>Back</button></a>
+</body>
+</html>

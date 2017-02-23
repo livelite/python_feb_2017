@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Django App</title>
+	<style>
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			margin: 100px;
+		}
+	</style>
+</head>
+	<h2>Random Word (attempt #{{ counter }})</h2>
+	<h1>{{ randomWord }}</h1>
+	<form action="/newword" method="POST">
+		<button type="submit">Generate new word</button>
+		{% csrf_token %}
+	</form>
+	</h1>
+</body>
+</html>
