@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email validation</title>
+</head>
+<body>
+	<div>
+		The email address you entered <strong>{{ request.session.email }}</strong> is a valid email address! Thank you for not messing with us.
+	</div>
+
+	<h3>
+		Email Addresses Entered:
+	</h3>
+
+	{% for email in emails %}
+		<div>{{ email.email }} {{ email.created_at }} <a href="/emails/delete/{{ email.id }}">delete</a></div>
+	{% endfor %}
+</body>
+</html>

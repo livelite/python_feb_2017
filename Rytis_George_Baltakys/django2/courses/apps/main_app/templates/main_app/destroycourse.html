@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django</title>
+</head>
+<body>
+	<h3>Are you sure you want to delete the following course?</h3>
+	<p>Name: {{ course.name }}</p>
+	<p>Description: {{ course.description }}</p>
+	<a href="/"><button>No</button></a>
+	<form action="/courses/delete/{{ course.id }}" method="POST">
+		<button type="submit">Yes! I want to delete this</button>
+		{% csrf_token %}
+	</form>
+</body>
+</html>
